@@ -48,6 +48,8 @@ public class Program
             })
             .ConfigureServices((_, services) =>
             {
+                AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.SuppressInsecureTLSWarning", true);
+                AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", true);
                 services.AddHostedService<Worker>();
             });
     }
