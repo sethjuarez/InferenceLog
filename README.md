@@ -20,16 +20,34 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong@Passw0rd" `
 
 ## Project
 
+This project uses [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download).
+Make sure to download and install in advance. This
+folder can be opened in [Visual Studio Code](https://code.visualstudio.com/).
+
 Make sure to add the nuget source:
 
 ```
 dotnet nuget add source --name nuget.org https://api.nuget.org/v3/index.json
 ```
 
-## Connection
+## Connection Settings
 
 - [Database and table creation](database.sql) - This creates
   the initial database and table
 - [Centralized Connection Settings](Connection.cs) - all
   relevant settings the Console App uses for connecting
   to the server and database are found here
+
+## Running
+
+Restore:
+
+```
+dotnet restore
+```
+
+Running:
+
+```
+dotnet run
+```
